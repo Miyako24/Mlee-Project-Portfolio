@@ -1,4 +1,15 @@
 :root {
+  --apricot: #dd885b;
+  --melon: #ffb4a2;
+  --salmon-pink: #e5989b;
+  --old-rose: #b5838d;
+  --dim-gray: #6d6875;
+
+  --cornsilk: #fff8dc;
+  --dark-blue: #001f3f;
+  --papaya-whip: #ffefd5;
+  --buff: #a982f0;
+
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -14,14 +25,60 @@
 }
 
 header {
-  display: center;
-  justify-content: flex-start; /* Aligns content to the left */
-  padding-left: 1rem; /* Adds some spacing from the left edge */
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Aligns content to the left */
+  padding: 1rem 2rem; /* Adds some spacing from the left edge */
+  background-color: var(--dim-gray); /* Optional: Add background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for effect */
+}
+
+.header {
+  font-size: 2.5rem;
+  color: white;
+  font-family: 'Georgia', serif;
+  letter-spacing: 1px;
+  margin: 0; /* Remove default margin */
+}
+
+/* Navigation Styles */
+nav {
+  display: flex;
+}
+
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 2rem; /* Space between the navigation items */
+  margin: 0;
+  padding: 0;
+}
+
+.nav li {
+  text-align: center;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.nav a:hover {
+  color: var(--apricot); /* Hover effect */
+}
+
+.nav .active a {
+  font-weight: bold;
+  color: var(--apricot); /* Active link color */
+  border-bottom: 2px solid var(--apricot); /* Underline the active link */
 }
 
 
+
 a {
-  font-weight: 500;
+  font-weight: 600;
   color: #b464ff;
   text-decoration: inherit;
 }
@@ -30,6 +87,8 @@ a:hover {
 }
 
 body {
+  background-color: var(--cornsilk);
+  color: var(--dark-blue);
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -61,13 +120,14 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: var(--dark-blue);
+    background-color:var(--cornsilk);
   }
   a:hover {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: var(--papaya-whip);
+    border-color: var(--buff);
   }
 }

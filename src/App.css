@@ -3,6 +3,27 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+
+:root {
+  /* CSS HEX */
+  --charcoal: #264653ff;
+  --persian-green: #2a9d8fff;
+  --saffron: #e9c46aff;
+  --sandy-brown: #f4a261ff;
+  --burnt-sienna: #e76f51ff;
+
+  /* CSS HSL */
+  --charcoal-hsl: hsla(197, 37%, 24%, 1);
+  --persian-green-hsl: hsla(173, 58%, 39%, 1);
+  --saffron-hsl: hsla(43, 74%, 66%, 1);
+  --sandy-brown-hsl: hsla(27, 87%, 67%, 1);
+  --burnt-sienna-hsl: hsla(12, 76%, 61%, 1);
+}
+
+
+body {
+  background-color: var(--cornsilk);
+  color: var(--dark-blue);
 }
 
 .logo {
@@ -26,6 +47,7 @@ nav ul {
 }
 
 nav button {
+  color: var(--accent-purple);
   background: none;
   border: none;
   cursor: pointer;
@@ -55,8 +77,149 @@ nav button.active {
 
 .card {
   padding: 2em;
+  background-color: var(--beige);
+  border: 1px solid var(--buff);
 }
 
-.read-the-docs {
-  color: #888;
+.card:hover {
+  background-color: var(--papaya-whip);
+  border-color: var(--dark-blue);
 }
+.card h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+}
+.card p {
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+.card a {
+  color: var(--accent-purple);
+  text-decoration: none;
+}
+.card a:hover {
+  color: var(--hover-purple);
+}
+.card a:visited {
+  color: var(--dark-blue);
+}
+.card a:active {
+  color: var(--accent-purple);
+}
+.card a:focus {
+  outline: 4px auto var(--accent-purple);
+}
+.card a:focus-visible {
+  outline: 4px auto var(--accent-purple);
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 2rem;
+padding: 2rem;
+justify-items: start;
+text-align: left;
+}
+
+
+  
+  .project-card a {
+    display: block;
+    position: relative;
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .image-container {
+    position: relative;
+  }
+  
+  .project-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .project-card:hover .project-image {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
+  
+  .project-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    width: 90%;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-radius: 5px;
+  }
+  
+  .project-card a:hover .project-title {
+    background: rgba(0, 0, 0, 0.7); /* Darken background on hover */
+  }
+  
+  .project-card p {
+    margin-top: 1rem;
+    text-align: center;
+  }
+    .read-the-docs {
+      color: var(--text-gray);
+    }
+
+    .error {
+      color: red;
+      font-size: 0.9rem;
+      margin-top: 0.25rem;
+    }
+    .image-container {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+      margin: 1rem;
+    }
+    
+    .project-image {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+    }
+    
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7); /* semi-transparent black */
+      color: #fff;
+      width: 100%;
+      padding: 10px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 0 0 8px 8px;
+    }
+    
+    .image-container:hover .overlay {
+      opacity: 1;
+    }
+    
+    .overlay h3 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+    
+    .overlay a {
+      color: #ffd700;
+      text-decoration: underline;
+      font-size: 0.9rem;
+    }
+
+  }
+
