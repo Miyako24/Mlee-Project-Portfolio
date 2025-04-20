@@ -5,7 +5,7 @@ const Resume = () => {
     <section>
       <h1>Resume</h1>
       <section style={{ textAlign: "left", marginLeft: "2rem" }}></section>
-      <a href="Miyako Lee Resume.docx" target="_blank" rel="noopener noreferrer">
+      <a href="Miyako Lee Resume 2025.docx" target="_blank" rel="noopener noreferrer">
         📄 Download My Resume
       </a>
 
